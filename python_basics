@@ -1,0 +1,40 @@
+1. What is the result of the code, and why?
+>>> def func(a, b=6, c=8):
+print(a, b, c)
+>>> func(1, 2)
+Ans:-
+Output will be "1,2,8", as per func we have given values of a and b and the func will take it own assign value  8 and return values of a,b,c.
+2. What is the result of this code, and why?
+>>> def func(a, b, c=5):
+print(a, b, c)
+>>> func(1, c=3, b=2)
+Ans:-
+Here output will be 1,2,3 as we have given the values of a,b,c
+3. How about this code: what is its result, and why?
+>>> def func(a, *pargs):
+print(a, pargs)
+>>> func(1, 2, 3)
+Ans:-
+Then, the code calls the func function with arguments 1, 2, and 3. The arguments 2 and 3 are passed as positional arguments and are collected into pargs due to the asterisk (*) before pargs.
+4. What does this code print, and why?
+>>> def func(a, **kargs):
+print(a, kargs)
+>>> func(a=1, c=3, b=2)
+Ans:-
+Here the code calls the func function with keyword arguments a=1, c=3, and b=2. The keyword arguments are collected into kargs due to the double asterisks (**).
+output will be link :- 1 {'c': 3, 'b': 2}
+5. What gets printed by this, and explain?
+>>> def func(a, b, c=8, d=5): 
+print(a, b, c, d)
+>>> func(1, *(5, 6))
+Ans:-
+Then, the code calls the func function with arguments 1 and the tuple *(5, 6). The * before (5, 6) unpacks the tuple, so 5 is assigned to b and 6 is assigned to c. The default value of d remains unchanged.
+So output will be :- 1 5 6 5
+6. what is the result of this, and explain?
+>>> def func(a, b, c): a = 2; b[0] = 'x'; c['a'] = 'y'
+>>> l=1; m=[1]; n={'a':0}
+>>> func(l, m, n)
+>>> l, m, n
+Ans:-
+Here this code will through error _ NameError: name 'l' is not defined
+
